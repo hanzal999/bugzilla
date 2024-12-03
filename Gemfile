@@ -41,7 +41,7 @@ gem 'bootsnap', '>= 1.11.1', require: false
 group :development, :test do
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
   gem 'pry-byebug'
-  gem 'rspec-rails', '~> 5.0', '>= 5.0.2'
+  gem 'rspec-rails', '~> 6.1'
   gem 'rack_session_access'
   gem 'database_cleaner-active_record'
 end
