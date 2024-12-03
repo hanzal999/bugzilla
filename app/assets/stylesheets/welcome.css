@@ -27,5 +27,6 @@ div#omniauth-buttons {
 }
 .btn-success {
   background-color: red;
-  border-color : white;
+  border-color : gray;
+
 }
