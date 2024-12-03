@@ -1,0 +1,20 @@
+<h1 class="title">Users</h1>
+
+<small class="add-edit-record"><%= link_to("Add new user",new_user_path) %></small>
+
+<table class="table table-striped">
+  <thead>
+    <th>Name</th>
+    <th>Role</th>
+    <th>Email</th>
+  </thead>
+  <tbody>
+  <% @users.each do |user| %>
+    <tr>
+      <td><%= user.full_name %> </td>
+      <td><%= user.role_name %> </td>
+      <td><%= user.email %> </td>
+      <td><%= link_to "Edit", edit_user_path(user) %> </td>
+    </tr>
+  <% end %>
+</table>

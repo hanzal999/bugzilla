@@ -1,0 +1,33 @@
+<h1 class="title">new account</h1>
+
+<div class="form-container">
+  <%= simple_form_for @guest || User.new, url:"/welcome" do |f| %>
+    <div class="row">
+      <div class="mb-3 col">
+        <%= f.input :first_name, label: 'Enter first name: ', label_html: {class: "form-label"}, input_html: {class: "form-control", value: @user_omniauth && @user_omniauth[:first_name]} %>
+      </div>
+      <div class="mb-3 col">
+        <%= f.input :last_name, label: 'Enter last name: ', label_html: {class: "form-label"}, input_html: {class: "form-control", value: @user_omniauth && @user_omniauth[:last_name]} %>
+      </div>
+    </div>
+    <div class="row">
+      <div class="mb-3 col">
+        <%= f.association :role, label: 'Select role: ' ,collection: @roles, label_html: {class: "form-label"}, input_html: {class: "form-select"} %>
+      </div>
+      <div class="mb-3 col">
+        <%= f.input :email, label: 'Enter email: ', label_html: {class: "form-label"}, input_html: {class: "form-control", value: @user_omniauth && @user_omniauth[:email]} %>
+      </div>
+    </div>
+    <div class="row">
+      <div class="mb-3 col">
+        <%= f.input :password, label: 'Enter password: ', label_html: {class: "form-label"}, input_html: {class: "form-control"} %>
+      </div>
+      <div class="mb-3 col">
+        <%= f.input :password_confirmation, label: 'Confirm password: ', label_html: {class: "form-label"}, input_html: {class: "form-control"} %>
+      </div>
+    </div>
+    <%= f.button :submit, class:"btn btn-success" %>
+  <% end %>
+  
+</div>
+

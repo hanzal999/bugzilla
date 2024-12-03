@@ -1,0 +1,23 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  host: localhost
+  port: 5432
+  username: <%= ENV.fetch("DB_USERNAME", "hanzala") %>  # Default to "hanzala" if ENV variable is not set
+  password: <%= ENV.fetch("DB_PASSWORD", "password") %>  # Default to empty password if ENV variable is not set
+
+development:
+  <<: *default
+  database: hanzala_development
+
+test:
+  <<: *default
+  database: hanzala_development
+
+production:
+  <<: *default
+  database: <%= ENV.fetch("DATABASE_NAME", "hanzala_production") %>
+  username: <%= ENV.fetch("DATABASE_USERNAME", "hanzala") %>  # Use environment variables in production, defaulting to "hanzala"
+  password: <%= ENV.fetch("DATABASE_PASSWORD", "password") %>  # Use environment variables in production, defaulting to empty password
+  url: <%= ENV.fetch("DATABASE_URL", "") %>  # Optional: full URL if using a single DATABASE_URL env var

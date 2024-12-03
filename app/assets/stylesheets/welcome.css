@@ -1,0 +1,31 @@
+div.homepage {
+  padding-bottom: 10%;
+  padding-top: 2.5%;
+}
+
+div#bug-main-icon, 
+h1.display-5, h6 {
+  text-align: center;
+}
+
+div.form-container {
+  margin: auto;
+  margin-top: 5%;
+  max-width: 500px;
+}
+input.form-control {
+  max-width: 500px;
+}
+
+div#omniauth-buttons {
+  margin-top: 20%;
+  text-align: center;
+}
+
+#fabebook-button, #github-button {
+  margin: 1%
+}
+.btn-success {
+  background-color: red;
+  border-color : white;
+}
