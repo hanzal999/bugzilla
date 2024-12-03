@@ -4,7 +4,7 @@ source "https://rubygems.org"
 ruby '3.2.0'
 
 # Use Rails 6.1.7.10, compatible with Ruby 3.2.0
-gem 'rails', '~> 6.1.7', '>= 6.1.7.10'
+gem 'rails', '~> 8.0.0'
 
 # PostgreSQL as the database
 gem 'pg', '~> 1.1'
