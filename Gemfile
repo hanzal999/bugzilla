@@ -18,7 +18,7 @@ gem 'dotenv-rails'
 gem 'thin'
 
 # Use Puma as the app server
-gem 'puma', '~> 5.6'
+gem 'puma', '~> 6.6'
 
 # SCSS for stylesheets
 gem 'sassc-rails', '>= 2.1'
